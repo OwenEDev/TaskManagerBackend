@@ -29,10 +29,9 @@ namespace TaskManagerBackend.Hubs
             await Clients.All.SendAsync("deleteTask", taskId);
         }
 
-        public async Task Test()
+        public async Task GetTasks()
         {
-            Console.WriteLine("Test method called");
-            await Clients.All.SendAsync("ReceivedTest", "Test successful");
+            await Clients.All.SendAsync("GetTasks");
         }
     }
 }
